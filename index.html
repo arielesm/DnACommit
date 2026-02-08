@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
 	<script type="text/javascript" src="js/functions.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/love.js" charset="utf-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 　　<link rel="shortcut icon" href="images/love.ico"/>
 	<link rel="bookmark" href="/mages/love.ico"/>
     <style type="text/css">
@@ -199,15 +200,6 @@
             $await(Jscex.Async.sleep(1000));
         }
     }));
-	document.addEventListener('DOMContentLoaded', function () {
-	  function audioAutoPlay() {
-		  bgm.play();
-		  document.addEventListener("WeixinJSBridgeReady", function () {
-			  bgm.play();
-		  }, false);
-	  }
-	  audioAutoPlay();
-	 });
     var runAsync = eval(Jscex.compile("async",
     function() {
         $await(seedAnimate());
