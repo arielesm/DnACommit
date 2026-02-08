@@ -217,7 +217,30 @@
         textAnimate().start();
         $await(jumpAnimate());
     }));
-    runAsync().start();
+//    runAsync().start();
+		// Hapus atau komen kode runAsync().start() yang lama, ganti dengan ini:
+	window.addEventListener('load', () => {
+	    Swal.fire({
+	        title: 'Hai Dindakuu sayang ❤️',
+	        text: 'Arie punya sesuatu buat kamu, dengerin pake musik ya?',
+	        icon: 'heart', // Biar lebih romantis
+	        showCancelButton: true,
+	        confirmButtonColor: '#ff708e',
+	        cancelButtonColor: '#d33',
+	        confirmButtonText: 'Boleh!',
+	        cancelButtonText: 'Nggak usah',
+	    }).then((result) => {
+	        if (result.isConfirmed) {
+	            // Putar musik (id-nya harus 'bgm')
+	            document.getElementById('bgm').play();
+	            // Mulai animasi pohon
+	            runAsync().start();
+	        } else {
+	            // Tetap mulai animasi meski tanpa musik
+	            runAsync().start();
+	        }
+	    });
+	});
 })();
 	</script>
 </body>
